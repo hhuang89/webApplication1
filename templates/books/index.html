@@ -1,0 +1,16 @@
+{% extends "books/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+    <h1>Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{% url 'book' book.id %}">
+                    Book {{ book.id }}: {{ book.bookname }} WrittenBy {{ book.authorName }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

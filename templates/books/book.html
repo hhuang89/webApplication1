@@ -1,0 +1,10 @@
+{% extends "books/layout.html" %}
+
+{%  block body %}
+    <h1>Book {{ book.id }}</h1>
+
+    <ul>
+    <li>Book: {{ book.bookname }}</li>
+    <li>Author: {{ book.authorName }}</li>
+    </ul>
+{% endblock %}
