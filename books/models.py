@@ -1,7 +1,9 @@
 from django.db import models
 
-
 # Create your models here.
+from django.templatetags.static import static
+
+
 class Category(models.Model):
     name = models.CharField(max_length=64)
 
@@ -20,3 +22,7 @@ class Book(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.bookname} and {self.authorName}"
+
+    @property
+    def img_url(self):
+        return static("images/{}".format(self.bookcover1))
