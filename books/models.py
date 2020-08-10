@@ -19,6 +19,7 @@ class Book(models.Model):
     bookcover1 = models.CharField(max_length=64)
     bookcover2 = models.CharField(max_length=64)
     bookcover3 = models.CharField(max_length=64)
+    price = models.DecimalField(default=9.99, max_digits=6, decimal_places=2)
 
     def __str__(self):
         return f"{self.id}: {self.bookname} and {self.authorName}"

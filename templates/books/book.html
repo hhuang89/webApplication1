@@ -1,10 +1,34 @@
 {% extends "books/layout.html" %}
+{% load static %}
 
 {%  block body %}
-    <h1>Book {{ book.id }}</h1>
+    <link rel="stylesheet" href="{% static 'css/book.css' %}">
+    <script src="{% static 'js/book.js' %}"></script>
+    <div class="ImportantInfo">
+        <div class="Image">
+            <img src="{{ book.img_url }}" alt="bookcover">
+        </div>
+        <div class="Info">
+            <div class="bookTitle">
+                 <p>{{ book.bookname }}</p>
+            </div>
+            <div class="booKAuthor">
+                <P>{{ book.authorName }}</P>
+            </div>
+            <div class="bookPrice">
+                <span id="price">{{ book.price }}</span>
+                <select id="Currency">
+                    <option id="USD">USD</option>
+                    <option id="NZD">NZD</option>
+                </select>
+            </div>
 
-    <ul>
-    <li>Book: {{ book.bookname }}</li>
-    <li>Author: {{ book.authorName }}</li>
-    </ul>
+        </div>
+
+    </div>
+    <div class="Brief">
+        <p>{{ book.brief }}</p>
+    </div>
+
+
 {% endblock %}

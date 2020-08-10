@@ -1,24 +1,28 @@
-h1 {
-    text-align: center;
-    font-size: 50px;
-    font-family: sans-serif;
-}
-
-hr.solid {
-  border-top: 10px solid #000000;
-}
-
-.book {
-    display: inline-table;
-    width: 33%;
-    
-    overflow: auto;
-}
-
 .bookTitle {
-    text-align: center;
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
 }
 
 .booKAuthor {
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
+}
+
+.bookPrice {
+    text-align: left;
+    font-size: 30px;
+    color: #c80600;
+}
+
+.ImportantInfo {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+.Image {
+    margin-left: 20px;
+}
+
+.Info {
+
 }
