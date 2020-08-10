@@ -7,3 +7,18 @@ h1 {
 hr.solid {
   border-top: 10px solid #000000;
 }
+
+.book {
+    display: inline-table;
+    width: 33%;
+    
+    overflow: auto;
+}
+
+.bookTitle {
+    text-align: center;
+}
+
+.booKAuthor {
+    text-align: center;
+}

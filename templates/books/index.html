@@ -5,18 +5,27 @@
     <link rel="stylesheet" href="{% static 'css/book.css' %}">
     <h1>Books</h1>
     <hr class="solid">
-    {% for book in books %}
-        <div class="img">
-            <img src="{{ book.img_url }}">
-        </div>
-        <div class="bookInfo">
-            <li>
-            <a href="{% url 'book' book.id %}">
-                Book {{ book.id }}: {{ book.bookname }} WrittenBy {{ book.authorName }}
-            </a>
-        </li>
-        </div>
+    <div class="container">
+        {% for book in books %}
+            <div class="book">
+                <div class="img">
+                    <a href="{% url 'book' book.id %}">
+                        <img src="{{ book.img_url }}" alt="bookcover">
+                    </a>
+                </div>
+                <div class="bookTitle">
+                    <a href="{% url 'book' book.id %}">
+                        {{ book.bookname }}
+                    </a>
+                </div>
+                <div class="booKAuthor">
+                    <a href="{% url 'book' book.id %}">
+                        {{ book.authorName }}
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
-    {% endfor %}
 
 {% endblock %}
